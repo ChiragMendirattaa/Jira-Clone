@@ -1,6 +1,6 @@
 package com.example.jiraclone.dto; // (Your package name)
 
-import com.example.jiraclone.enums.IssueStatus; // <-- IMPORT THIS
+import com.example.jiraclone.enums.IssueStatus;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
 import lombok.Setter;

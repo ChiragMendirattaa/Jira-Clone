@@ -1,10 +1,6 @@
 package com.example.jiraclone.exception.handler;
 
-import com.example.jiraclone.exception.IssueNotFoundException;
-import com.example.jiraclone.exception.ProjectNotFoundException;
-import com.example.jiraclone.exception.ResourceNotFoundException;
-import com.example.jiraclone.exception.UnauthorizedAccessException;
-import com.example.jiraclone.exception.UserAlreadyExistsException;
+import com.example.jiraclone.exception.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -13,25 +9,10 @@ import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.context.request.WebRequest;
 
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-
-    // Helper DTO for the error response
-    private static class ErrorDetails {
-        public Date timestamp;
-        public String message;
-        public String details;
-
-        public ErrorDetails(Date timestamp, String message, String details) {
-            this.timestamp = timestamp;
-            this.message = message;
-            this.details = details;
-        }
-    }
 
     // Handle our custom "Not Found" exceptions
     @ExceptionHandler({ResourceNotFoundException.class, ProjectNotFoundException.class, IssueNotFoundException.class})
@@ -71,5 +52,18 @@ public class GlobalExceptionHandler {
     public ResponseEntity<?> globalExceptionHandler(Exception ex, WebRequest request) {
         ErrorDetails errorDetails = new ErrorDetails(new Date(), ex.getMessage(), request.getDescription(false));
         return new ResponseEntity<>(errorDetails, HttpStatus.INTERNAL_SERVER_ERROR);
+    }
+
+    // Helper DTO for the error response
+    private static class ErrorDetails {
+        public Date timestamp;
+        public String message;
+        public String details;
+
+        public ErrorDetails(Date timestamp, String message, String details) {
+            this.timestamp = timestamp;
+            this.message = message;
+            this.details = details;
+        }
     }
 }

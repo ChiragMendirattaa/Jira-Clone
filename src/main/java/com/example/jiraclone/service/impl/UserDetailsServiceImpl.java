@@ -1,6 +1,5 @@
 package com.example.jiraclone.service.impl;
 
-import com.example.jiraclone.entity.User;
 import com.example.jiraclone.repository.UserRepository;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;

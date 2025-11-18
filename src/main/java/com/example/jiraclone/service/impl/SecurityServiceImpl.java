@@ -69,6 +69,7 @@ public class SecurityServiceImpl implements SecurityService {
             throw new UnauthorizedAccessException("User is not the author of this comment");
         }
     }
+
     @Override
     @Transactional(readOnly = true)
     public void checkUserIsProjectOwner(Long projectId) {

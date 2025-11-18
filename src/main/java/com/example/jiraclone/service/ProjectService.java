@@ -3,6 +3,7 @@ package com.example.jiraclone.service;
 import com.example.jiraclone.dto.AddMemberRequestDTO;
 import com.example.jiraclone.dto.ProjectRequestDTO;
 import com.example.jiraclone.dto.ProjectResponseDTO;
+
 import java.util.List;
 
 public interface ProjectService {
@@ -19,7 +20,8 @@ public interface ProjectService {
 
     /**
      * Updates a project's details.
-     * @param projectId The ID of the project to update.
+     *
+     * @param projectId         The ID of the project to update.
      * @param projectRequestDTO DTO with new name and key.
      * @return The updated project DTO.
      */
@@ -27,8 +29,9 @@ public interface ProjectService {
 
     /**
      * Removes a member from a project.
+     *
      * @param projectId The ID of the project.
-     * @param userId The ID of the user to remove.
+     * @param userId    The ID of the user to remove.
      * @return The updated project DTO.
      */
     ProjectResponseDTO removeMemberFromProject(Long projectId, Long userId); // <-- ADD

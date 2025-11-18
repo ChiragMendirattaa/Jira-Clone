@@ -1,30 +1,21 @@
 package com.example.jiraclone.service.impl; // (Or your package name)
 
-import com.example.jiraclone.dto.CreateIssueRequestDTO;
-import com.example.jiraclone.dto.IssueResponseDTO;
-import com.example.jiraclone.dto.SubtaskResponseDTO;
-import com.example.jiraclone.dto.UpdateIssueRequestDTO;
-import com.example.jiraclone.dto.UpdateIssueStatusDTO;
-// import com.example.jiraclone.dto.WorkflowStatusDTO; // <-- REMOVED
+import com.example.jiraclone.dto.*;
 import com.example.jiraclone.entity.Issue;
 import com.example.jiraclone.entity.Project;
 import com.example.jiraclone.entity.User;
-// import com.example.jiraclone.entity.WorkflowStatus; // <-- REMOVED
-import com.example.jiraclone.enums.IssueStatus; // <-- RE-IMPORTED
+import com.example.jiraclone.enums.IssueStatus;
 import com.example.jiraclone.exception.IssueNotFoundException;
 import com.example.jiraclone.exception.ResourceNotFoundException;
-import com.example.jiraclone.exception.UnauthorizedAccessException;
 import com.example.jiraclone.repository.IssueRepository;
 import com.example.jiraclone.repository.ProjectRepository;
 import com.example.jiraclone.repository.UserRepository;
-// import com.example.jiraclone.repository.WorkflowStatusRepository; // <-- REMOVED
 import com.example.jiraclone.service.IssueService;
 import com.example.jiraclone.service.SecurityService;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Set;
 import java.util.stream.Collectors;
 
 @Service
@@ -207,5 +198,4 @@ public class IssueServiceImpl implements IssueService {
         return dto;
     }
 
-    // --- REMOVED mapToWorkflowStatusDTO helper method ---
 }
