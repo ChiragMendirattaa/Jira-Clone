@@ -1,13 +1,13 @@
 package com.example.jiraclone.service.impl;
 
-import com.example.jiraclone.dto.ChangePasswordRequestDTO; // <-- Import
+import com.example.jiraclone.dto.ChangePasswordRequestDTO;
 import com.example.jiraclone.dto.UserResponseDTO;
 import com.example.jiraclone.entity.User;
-import com.example.jiraclone.exception.UnauthorizedAccessException; // <-- Import
+import com.example.jiraclone.exception.UnauthorizedAccessException;
 import com.example.jiraclone.repository.UserRepository;
-import com.example.jiraclone.service.SecurityService; // <-- Import
+import com.example.jiraclone.service.SecurityService;
 import com.example.jiraclone.service.UserService;
-import org.springframework.security.crypto.password.PasswordEncoder; // <-- Import
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

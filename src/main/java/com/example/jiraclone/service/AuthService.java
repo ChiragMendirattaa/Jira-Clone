@@ -10,6 +10,7 @@ public interface AuthService {
 
     /**
      * Registers a new user in the system.
+     *
      * @param registrationRequest DTO containing user registration details
      * @return UserResponseDTO of the newly created user
      * @throws com.example.jiraclone.exception.UserAlreadyExistsException if username or email is taken
@@ -18,6 +19,7 @@ public interface AuthService {
 
     /**
      * Authenticates a user and returns a JWT.
+     *
      * @param loginRequest DTO containing user login credentials
      * @return AuthResponseDTO containing the JWT and user details
      * @throws org.springframework.security.core.AuthenticationException if credentials are invalid

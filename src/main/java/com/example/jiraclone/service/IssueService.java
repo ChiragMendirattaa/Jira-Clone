@@ -4,6 +4,7 @@ import com.example.jiraclone.dto.CreateIssueRequestDTO;
 import com.example.jiraclone.dto.IssueResponseDTO;
 import com.example.jiraclone.dto.UpdateIssueRequestDTO;
 import com.example.jiraclone.dto.UpdateIssueStatusDTO;
+
 import java.util.List;
 
 public interface IssueService {

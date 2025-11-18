@@ -1,14 +1,17 @@
 package com.example.jiraclone.controller;
 
-import com.example.jiraclone.dto.AuthResponseDTO; // Import this
-import com.example.jiraclone.dto.LoginRequestDTO; // Import this
+import com.example.jiraclone.dto.AuthResponseDTO;
+import com.example.jiraclone.dto.LoginRequestDTO;
 import com.example.jiraclone.dto.UserRegistrationRequestDTO;
 import com.example.jiraclone.dto.UserResponseDTO;
 import com.example.jiraclone.service.AuthService;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/auth")
