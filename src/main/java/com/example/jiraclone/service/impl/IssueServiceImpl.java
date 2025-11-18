@@ -207,5 +207,4 @@ public class IssueServiceImpl implements IssueService {
         return dto;
     }
 
-    // --- REMOVED mapToWorkflowStatusDTO helper method ---
 }
